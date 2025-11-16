@@ -1,6 +1,7 @@
 import sys
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 if "SUMO_HOME" not in os.environ:
     sys.exit("Ustaw zmienną środowiskową SUMO_HOME.")
 
@@ -10,7 +11,7 @@ CONFIG_FILES = {
 }
 
 
-NUM_SIMULATIONS = 2
+NUM_SIMULATIONS = 100
 SIM_DURATION = 1000
 SUMO_BINARY = "sumo"
 
