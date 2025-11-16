@@ -1,13 +1,17 @@
 import sys
 import os
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(override=True)
 if "SUMO_HOME" not in os.environ:
     sys.exit("Ustaw zmienną środowiskową SUMO_HOME.")
 
+sumo_bin = os.path.join(os.environ["SUMO_HOME"], "bin")
+os.environ["PATH"] = sumo_bin + os.pathsep + os.environ["PATH"]
+
 CONFIG_FILES = {
     # "Rondo": "rondo\\rondo.sumocfg"
-    "Swiatla": "sygnalizacja\\sygnalizacja.sumocfg"
+    "Swiatla": "sygnalizacja/sygnalizacja.sumocfg"
 }
 
 
