@@ -10,7 +10,7 @@ sumo_bin = os.path.join(os.environ["SUMO_HOME"], "bin")
 os.environ["PATH"] = sumo_bin + os.pathsep + os.environ["PATH"]
 
 CONFIG_FILES = {
-    # "Rondo": "rondo\\rondo.sumocfg"
+    # "Rondo": "rondo/rondo.sumocfg"
     "Swiatla": "sygnalizacja/sygnalizacja.sumocfg"
 }
 
