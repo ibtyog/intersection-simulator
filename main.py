@@ -1,171 +1,17 @@
 import random
 import traci
 import csv
-import os
+
 import sys
-import xml.etree.ElementTree as ET
-from io import StringIO
+
 import time
-import subprocess
-
-if "SUMO_HOME" not in os.environ:
-    sys.exit("Ustaw zmienną środowiskową SUMO_HOME.")
-
-CONFIG_FILES = {
-    # "Rondo": "rondo\\rondo.sumocfg"
-    "Swiatla": "sygnalizacja\\sygnalizacja.sumocfg"
-}
-
-
-NUM_SIMULATIONS = 2
-SIM_DURATION = 1000
-SUMO_BINARY = "sumo"
-
-
-RANGE_P_TRUCK = (0.0, 0.15)
-RANGE_TAU_CAR = (1.0, 2.5)
-MIN_TAU_TRUCK_OFFSET = 2.1
-
-
-SUMMARY_OUTPUT_FILE = "summary_output.xml"
-
-
-CSV_HEADERS = [
-    "scenariusz",
-    "iteracja",
-    "udzial_ciezarowek",
-    "tau_osobowki",
-    "tau_ciezarowki",
-    "liczba_pojazdow_exit",
-    "sredni_czas_opoznienia_s",
-    "calkowity_czas_symulacji_s",
-]
-
-
-ORIGINAL_FLOWS = {
-    "f_0": {"from": "Zwycieska_EW", "to": "Oltaszynska_NN", "vph": 349.99},
-    "f_1": {"from": "Zwycieska_EW", "to": "Zwycieska_WW.148", "vph": 349.99},
-    "f_10": {"from": "Oltaszynska_SN", "to": "Oltaszynska_NN", "vph": 200.0},
-    "f_11": {"from": "Oltaszynska_SN", "to": "Zwycieska_WW.148", "vph": 700.39},
-    "f_2": {"from": "Zwycieska_EW", "to": "Oltaszynska_SS", "vph": 349.99},
-    "f_3": {"from": "E7", "to": "Oltaszynska_SS", "vph": 300.0},
-    "f_4": {"from": "E7", "to": "-Zwycieska_EW", "vph": 1150.16},
-    "f_5": {"from": "E7", "to": "Oltaszynska_NN", "vph": 250.0},
-    "f_6": {"from": "Oltaszynska_NS", "to": "Zwycieska_WW.148", "vph": 750.0},
-    "f_7": {"from": "Oltaszynska_NS", "to": "Oltaszynska_SS", "vph": 200.0},
-    "f_8": {"from": "Oltaszynska_NS", "to": "-Zwycieska_EW", "vph": 450.0},
-    "f_9": {"from": "Oltaszynska_SN", "to": "-Zwycieska_EW", "vph": 450.0},
-}
-
-
-def generate_routes_file(filename, p_truck, tau_car, tau_truck):
-    """Generuje plik routes.xml z dynamicznym podziałem na pojazdy/ciężarówki oraz dynamicznym tau."""
-
-    routes_xml_builder = StringIO()
-
-    routes_xml_builder.write(
-        """<?xml version="1.0" encoding="UTF-8"?>
-<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <vType id="t_0" accel="2.6" decel="4.5" sigma="0.5" length="5.0" minGap="2.5" maxSpeed="50.0" tau="{:.2f}"/> 
-    <vType id="truck" vClass="truck" accel="0.8" decel="3.5" sigma="0.8" length="12.0" minGap="3.0" maxSpeed="30.0" tau="{:.2f}"/> 
-
-    """.format(
-            tau_car, tau_truck
-        )
-    )
-
-    flow_id_counter = 0
-
-    for original_id, flow_data in ORIGINAL_FLOWS.items():
-        total_vph = flow_data["vph"]
-        vph_truck = total_vph * p_truck
-        vph_car = total_vph * (1 - p_truck)
-
-        routes_xml_builder.write(
-            f'    <flow id="f_{flow_id_counter}" type="t_0" begin="0.00" from="{flow_data["from"]}" to="{flow_data["to"]}" end="{SIM_DURATION}.00" vehsPerHour="{vph_car:.2f}"/>\n'
-        )
-        flow_id_counter += 1
-
-        if vph_truck > 0.01:
-            routes_xml_builder.write(
-                f'    <flow id="f_{flow_id_counter}" type="truck" begin="0.00" from="{flow_data["from"]}" to="{flow_data["to"]}" end="{SIM_DURATION}.00" vehsPerHour="{vph_truck:.2f}"/>\n'
-            )
-            flow_id_counter += 1
-
-    routes_xml_builder.write("</routes>")
-
-    with open(filename, "w") as f:
-        f.write(routes_xml_builder.getvalue())
-
-    return filename
-
-
-def run_simulation_external(config_file, routes_file):
-    """Uruchamia SUMO bezpośrednio (bez TraCI) i czeka na zakończenie."""
-
-    command = [
-        SUMO_BINARY,
-        "-c",
-        config_file,
-        "--route-files",
-        routes_file,
-        "--step-length",
-        "1",
-        "--quit-on-end",
-        "--duration-log.statistics",
-        # f"--end", str(SIM_DURATION)  # Wymuś zakończenie po SIM_DURATION, jeśli pojazdy utkną na długo
-    ]
-
-    if SUMO_BINARY != "sumo-gui":
-        command.append("--no-warnings")
-    else:
-        command.append("--start")  # Włącz start w GUI
-
-    try:
-        result = subprocess.run(command, capture_output=True, text=True)
-
-        if result.returncode != 0:
-            print(f"Błąd uruchomienia SUMO (Kod: {result.returncode}).")
-            print(f"SUMO Output: {result.stderr}")
-            return None, None, None
-
-        return True, True, True
-
-    except Exception as e:
-        print(f"Krytyczny błąd w uruchamianiu SUMO: {e}")
-        return None, None, None
-
-
-def parse_summary_output(filename):
-    """Odczytuje summary_output.xml i zwraca metryki z ostatniego kroku.
-    Używa 'arrived', 'meanWaitingTime' i 'time'.
-    """
-
-    if not os.path.exists(filename):
-        print(f"Błąd: Plik wynikowy {filename} nie został wygenerowany.")
-        return 0, 0.0, 0.0
-
-    try:
-        tree = ET.parse(filename)
-        root = tree.getroot()
-
-        summary_steps = root.findall("step")
-        if not summary_steps:
-            return 0, 0.0, 0.0
-
-        final_step = summary_steps[-1]
-        arrived_count = float(final_step.get("arrived", 0))
-        avg_wait_sumo = float(final_step.get("meanWaitingTime", 0.0))
-        total_time = float(final_step.get("time", 0.0))
-        return arrived_count, avg_wait_sumo, total_time
-
-    except Exception as e:
-        print(f"Błąd podczas parsowania pliku XML: {e}")
-        return 0, 0.0, 0.0
-
+from app_modules.consts import *
+from app_modules.parser import parse_summary_output
+from app_modules.routes import generate_routes_file
+from app_modules.simulation import run_simulation_external
 
 if __name__ == "__main__":
-    OUTPUT_CSV = "wyniki_monte_carlo.csv"
+    OUTPUT_CSV = "results.csv"
     t = [time.time()]
 
     try:
