@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-09 16:38:52 by Eclipse SUMO netedit Version 1.24.0
+<neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="E:\!sumo\1\sygnalizacja\zwycieska_sygnalizacja.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="E:\!sumo\1\sygnalizacja\zwycieska_sygnalizacja.net.xml"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</neteditConfiguration>
+-->
+
+<net version="1.20" junctionCornerDetail="5" limitTurnSpeed="5.50" avoidOverlap="0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="-415.57,-542.71,341.03,743.96" origBoundary="-10000000000.00,-10000000000.00,10000000000.00,10000000000.00" projParameter="!"/>
+
+    <edge id=":J0_0" function="internal">
+        <lane id=":J0_0_0" index="0" speed="7.43" length="11.95" shape="38.61,24.98 34.72,25.36 31.94,26.45 30.25,28.26 29.67,30.77"/>
+    </edge>
+    <edge id=":J0_1" function="internal">
+        <lane id=":J0_1_0" index="0" speed="13.89" length="20.91" shape="38.61,24.98 17.70,25.12"/>
+    </edge>
+    <edge id=":J0_2" function="internal">
+        <lane id=":J0_2_0" index="0" speed="9.25" length="19.34" shape="38.60,21.78 33.34,21.06 29.58,18.83 27.31,15.10 26.55,9.86"/>
+    </edge>
+    <edge id=":J0_3" function="internal">
+        <lane id=":J0_3_0" index="0" speed="7.31" length="11.70" shape="32.95,9.84 33.31,13.68 34.37,16.41 36.12,18.05 38.58,18.58"/>
+    </edge>
+    <edge id=":J0_4" function="internal">
+        <lane id=":J0_4_0" index="0" speed="13.89" length="21.24" shape="32.95,9.84 32.46,16.63 31.34,22.18 30.21,26.80 29.67,30.77"/>
+    </edge>
+    <edge id=":J0_5" function="internal">
+        <lane id=":J0_5_0" index="0" speed="9.30" length="19.45" shape="29.75,9.85 29.01,15.10 26.75,18.86 22.97,21.13 17.68,21.92"/>
+    </edge>
+    <edge id=":J0_6" function="internal">
+        <lane id=":J0_6_0" index="0" speed="7.37" length="11.86" shape="17.63,15.52 21.53,15.14 24.32,14.07 25.99,12.31 26.55,9.86"/>
+    </edge>
+    <edge id=":J0_7" function="internal">
+        <lane id=":J0_7_0" index="0" speed="13.89" length="21.22" shape="17.63,15.52 24.41,15.97 29.98,17.03 34.60,18.10 38.58,18.58"/>
+    </edge>
+    <edge id=":J0_8" function="internal">
+        <lane id=":J0_8_0" index="0" speed="9.23" length="19.49" shape="17.65,18.72 22.96,19.44 26.73,21.69 28.97,25.47 29.67,30.77"/>
+    </edge>
+    <edge id=":J0_9" function="internal">
+        <lane id=":J0_9_0" index="0" speed="6.47" length="9.03" shape="23.27,30.71 22.95,28.25 21.91,26.50 20.16,25.46 17.70,25.12"/>
+    </edge>
+    <edge id=":J0_10" function="internal">
+        <lane id=":J0_10_0" index="0" speed="13.89" length="20.88" shape="26.47,30.74 26.55,9.86"/>
+    </edge>
+    <edge id=":J0_11" function="internal">
+        <lane id=":J0_11_0" index="0" speed="9.34" length="19.50" shape="26.47,30.74 27.28,25.45 29.56,21.65 33.33,19.37 38.58,18.58"/>
+    </edge>
+    <edge id=":J10_0" function="internal">
+        <lane id=":J10_0_0" index="0" speed="13.89" length="7.99" shape="26.50,-2.71 26.47,-10.71"/>
+    </edge>
+    <edge id=":J10_1" function="internal">
+        <lane id=":J10_1_0" index="0" speed="13.89" length="8.41" shape="29.67,-10.73 30.18,-8.27 31.29,-6.73 32.40,-5.20 32.90,-2.74"/>
+        <lane id=":J10_1_1" index="1" speed="13.89" length="8.41" shape="29.67,-10.73 29.70,-2.73"/>
+    </edge>
+    <edge id=":J11_0" function="internal">
+        <lane id=":J11_0_0" index="0" speed="13.89" length="8.01" shape="0.45,25.26 -7.58,25.29"/>
+        <lane id=":J11_0_1" index="1" speed="13.89" length="8.01" shape="0.43,22.06 -7.58,22.09"/>
+    </edge>
+    <edge id=":J11_2" function="internal">
+        <lane id=":J11_2_0" index="0" speed="13.89" length="8.38" shape="-7.58,18.89 -5.13,18.39 -3.60,17.29 -2.08,16.18 0.37,15.66"/>
+        <lane id=":J11_2_1" index="1" speed="13.89" length="8.38" shape="-7.58,18.89 0.40,18.86"/>
+    </edge>
+    <edge id=":J13_0" function="internal">
+        <lane id=":J13_0_0" index="0" speed="13.89" length="0.31" shape="274.88,22.07 274.57,22.07"/>
+    </edge>
+    <edge id=":J13_1" function="internal">
+        <lane id=":J13_1_0" index="0" speed="13.89" length="0.28" shape="274.58,18.87 274.86,18.87"/>
+    </edge>
+    <edge id=":J5_0" function="internal">
+        <lane id=":J5_0_0" index="0" speed="13.89" length="8.81" shape="-327.18,25.44 -329.64,24.94 -331.18,23.84 -332.72,22.74 -335.18,22.23"/>
+    </edge>
+    <edge id=":J5_1" function="internal">
+        <lane id=":J5_1_0" index="0" speed="13.89" length="7.99" shape="-335.17,19.03 -327.18,19.04"/>
+    </edge>
+    <edge id=":J8_0" function="internal">
+        <lane id=":J8_0_0" index="0" speed="13.89" length="8.41" shape="26.28,53.53 25.78,51.06 24.68,49.51 23.60,47.96 23.12,45.49"/>
+        <lane id=":J8_0_1" index="1" speed="13.89" length="8.41" shape="26.28,53.53 26.32,45.53"/>
+    </edge>
+    <edge id=":J8_2" function="internal">
+        <lane id=":J8_2_0" index="0" speed="13.89" length="7.97" shape="29.52,45.56 29.48,53.53"/>
+    </edge>
+    <edge id=":J9_0" function="internal">
+        <lane id=":J9_0_0" index="0" speed="13.89" length="8.39" shape="60.94,21.69 58.49,22.18 56.95,23.28 55.42,24.39 52.97,24.90"/>
+        <lane id=":J9_0_1" index="1" speed="13.89" length="8.39" shape="60.94,21.69 52.95,21.70"/>
+    </edge>
+    <edge id=":J9_2" function="internal">
+        <lane id=":J9_2_0" index="0" speed="13.89" length="8.01" shape="52.93,18.50 60.95,18.49"/>
+    </edge>
+    <edge id=":Zwycieska_0" function="internal">
+        <lane id=":Zwycieska_0_0" index="0" speed="13.89" length="3.00" shape="-354.96,19.01 -351.96,18.99"/>
+    </edge>
+
+    <edge id="-E0" from="J8" to="J0" priority="-1">
+        <lane id="-E0_0" index="0" speed="13.89" length="14.79" shape="23.12,45.49 23.27,30.71"/>
+        <lane id="-E0_1" index="1" speed="13.89" length="14.79" shape="26.32,45.53 26.47,30.74"/>
+    </edge>
+    <edge id="-E1" from="J11" to="J0" priority="-1">
+        <lane id="-E1_0" index="0" speed="13.89" length="17.25" shape="0.37,15.66 17.63,15.52"/>
+        <lane id="-E1_1" index="1" speed="13.89" length="17.25" shape="0.40,18.86 17.65,18.72"/>
+    </edge>
+    <edge id="-E2" from="J10" to="J0" priority="-1">
+        <lane id="-E2_0" index="0" speed="13.89" length="12.57" shape="32.90,-2.74 32.95,9.84"/>
+        <lane id="-E2_1" index="1" speed="13.89" length="12.57" shape="29.70,-2.73 29.75,9.85"/>
+    </edge>
+    <edge id="-E8" from="J0" to="J9" priority="-1">
+        <lane id="-E8_0" index="0" speed="13.89" length="14.35" shape="38.58,18.58 52.93,18.50"/>
+    </edge>
+    <edge id="-Zwycieska_EW" from="J13" to="J1" priority="-1">
+        <lane id="-Zwycieska_EW_0" index="0" speed="13.89" length="66.16" shape="274.86,18.87 341.02,18.37"/>
+    </edge>
+    <edge id="-Zwycieska_WW" from="J5" to="J11" priority="-1">
+        <lane id="-Zwycieska_WW_0" index="0" speed="13.89" length="319.60" shape="-327.18,19.04 -7.58,18.89"/>
+    </edge>
+    <edge id="E0" from="J0" to="J8" priority="-1">
+        <lane id="E0_0" index="0" speed="13.89" length="14.79" shape="29.67,30.77 29.52,45.56"/>
+    </edge>
+    <edge id="E1" from="J0" to="J11" priority="-1">
+        <lane id="E1_0" index="0" speed="13.89" length="17.25" shape="17.70,25.12 0.45,25.26"/>
+        <lane id="E1_1" index="1" speed="13.89" length="17.25" shape="17.68,21.92 0.43,22.06"/>
+    </edge>
+    <edge id="E2" from="J0" to="J10" priority="-1">
+        <lane id="E2_0" index="0" speed="13.89" length="12.57" shape="26.55,9.86 26.50,-2.71"/>
+    </edge>
+    <edge id="E7" from="J12" to="Zwycieska" priority="-1">
+        <lane id="E7_0" index="0" speed="13.89" length="60.63" shape="-415.59,19.75 -354.96,19.01"/>
+    </edge>
+    <edge id="E8" from="J9" to="J0" priority="-1">
+        <lane id="E8_0" index="0" speed="13.89" length="14.35" shape="52.97,24.90 38.61,24.98"/>
+        <lane id="E8_1" index="1" speed="13.89" length="14.35" shape="52.95,21.70 38.60,21.78"/>
+    </edge>
+    <edge id="Oltaszynska_NN" from="J8" to="J3" priority="-1">
+        <lane id="Oltaszynska_NN_0" index="0" speed="13.89" length="690.43" shape="29.48,53.53 29.79,743.96"/>
+    </edge>
+    <edge id="Oltaszynska_NS" from="J3" to="J8" priority="-1">
+        <lane id="Oltaszynska_NS_0" index="0" speed="13.89" length="690.43" shape="26.59,743.96 26.28,53.53"/>
+    </edge>
+    <edge id="Oltaszynska_SN" from="J4" to="J10" priority="-1">
+        <lane id="Oltaszynska_SN_0" index="0" speed="13.89" length="532.00" shape="26.46,-542.72 29.67,-10.73"/>
+    </edge>
+    <edge id="Oltaszynska_SS" from="J10" to="J4" priority="-1">
+        <lane id="Oltaszynska_SS_0" index="0" speed="13.89" length="532.00" shape="26.47,-10.71 23.26,-542.70"/>
+    </edge>
+    <edge id="Zwycieska_EE" from="J9" to="J13" priority="-1">
+        <lane id="Zwycieska_EE_0" index="0" speed="13.89" length="213.63" shape="60.95,18.49 274.58,18.87"/>
+    </edge>
+    <edge id="Zwycieska_EW" from="J1" to="J13" priority="-1">
+        <lane id="Zwycieska_EW_0" index="0" speed="13.89" length="66.16" shape="341.04,21.57 274.88,22.07"/>
+    </edge>
+    <edge id="Zwycieska_EW.13" from="J13" to="J9" priority="-1">
+        <lane id="Zwycieska_EW.13_0" index="0" speed="13.89" length="213.63" shape="274.57,22.07 60.94,21.69"/>
+    </edge>
+    <edge id="Zwycieska_WE" from="Zwycieska" to="J5" priority="-1">
+        <lane id="Zwycieska_WE_0" index="0" speed="13.89" length="16.79" shape="-351.96,18.99 -335.17,19.03"/>
+    </edge>
+    <edge id="Zwycieska_WW" from="J11" to="J5" priority="-1">
+        <lane id="Zwycieska_WW_0" index="0" speed="13.89" length="319.60" shape="-7.58,25.29 -327.18,25.44"/>
+        <lane id="Zwycieska_WW_1" index="1" speed="13.89" length="319.60" shape="-7.58,22.09 -327.18,22.24"/>
+    </edge>
+    <edge id="Zwycieska_WW.148" from="J5" to="Zwycieska" priority="-1">
+        <lane id="Zwycieska_WW.148_0" index="0" speed="13.89" length="16.79" shape="-335.18,22.23 -351.97,22.19"/>
+    </edge>
+
+    <tlLogic id="J0" type="static" programID="0" offset="0">
+        <phase duration="1"  state="rrrrrrrrrrrr"/>
+        <phase duration="1"  state="yyrrrryyrrrr"/>
+        <phase duration="45" state="GGrrrrGGrrrr"/>
+        <phase duration="3"  state="yyrrrryyrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrr"/>
+        <phase duration="1"  state="rrryyyrrrrrr"/>
+        <phase duration="25" state="rrrGGGGrrrrr"/>
+        <phase duration="3"  state="rrryyyrrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrrrrr"/>
+        <phase duration="1"  state="rrrrrrrrryyy"/>
+        <phase duration="25" state="GrrrrrrrrGGG"/>
+        <phase duration="3"  state="rrrrrrrrryyy"/>
+        <phase duration="1"  state="rrrrrrrrrrrr"/>
+        <phase duration="1"  state="rryrrrrryrrr"/>
+        <phase duration="17" state="rrGGrrrrGGrr"/>
+        <phase duration="3"  state="rryrrrrryrrr"/>
+    </tlLogic>
+    <tlLogic id="J13" type="static" programID="0" offset="0">
+        <phase duration="30" state="GG"/>
+        <phase duration="3"  state="yy"/>
+        <phase duration="15" state="rr"/>
+    </tlLogic>
+    <tlLogic id="J5" type="static" programID="0" offset="0">
+        <phase duration="82" state="GG"/>
+        <phase duration="3"  state="yy"/>
+        <phase duration="5"  state="rr"/>
+    </tlLogic>
+
+    <junction id="J0" type="traffic_light" x="28.18" y="20.24" incLanes="E8_0 E8_1 -E2_0 -E2_1 -E1_0 -E1_1 -E0_0 -E0_1" intLanes=":J0_0_0 :J0_1_0 :J0_2_0 :J0_3_0 :J0_4_0 :J0_5_0 :J0_6_0 :J0_7_0 :J0_8_0 :J0_9_0 :J0_10_0 :J0_11_0" shape="38.62,26.58 38.57,16.98 36.34,16.20 35.56,15.21 35.00,13.81 34.66,12.02 34.55,9.83 24.95,9.87 24.14,12.09 23.12,12.88 21.69,13.45 19.86,13.79 17.61,13.92 17.71,26.72 19.93,27.15 20.70,27.70 21.25,28.47 21.57,29.47 21.67,30.69 31.27,30.79 32.11,28.47 33.13,27.65 34.56,27.07 36.39,26.71">
+        <request index="0"  response="000000000000" foes="000100010000" cont="0"/>
+        <request index="1"  response="000000000000" foes="111100010000" cont="0"/>
+        <request index="2"  response="000011000000" foes="110011110000" cont="0"/>
+        <request index="3"  response="000010000000" foes="100010000000" cont="0"/>
+        <request index="4"  response="000110000111" foes="100110000111" cont="0"/>
+        <request index="5"  response="010110000100" foes="010110000100" cont="0"/>
+        <request index="6"  response="000000000000" foes="010000000100" cont="0"/>
+        <request index="7"  response="000000000000" foes="110000111100" cont="0"/>
+        <request index="8"  response="000000000011" foes="110000110011" cont="0"/>
+        <request index="9"  response="000000000010" foes="000000000010" cont="0"/>
+        <request index="10" response="000111000110" foes="000111100110" cont="0"/>
+        <request index="11" response="000110011110" foes="000110011110" cont="0"/>
+    </junction>
+    <junction id="J1" type="dead_end" x="341.03" y="19.97" incLanes="-Zwycieska_EW_0" intLanes="" shape="341.03,19.97 341.01,16.77 341.03,19.97"/>
+    <junction id="J10" type="priority" x="28.09" y="-6.72" incLanes="E2_0 Oltaszynska_SN_0" intLanes=":J10_0_0 :J10_1_0 :J10_1_1" shape="24.90,-2.71 34.50,-2.74 33.66,-5.77 32.11,-7.71 31.51,-8.95 31.27,-10.74 24.87,-10.70">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="J11" type="priority" x="-3.58" y="20.49" incLanes="E1_0 E1_1 -Zwycieska_WW_0" intLanes=":J11_0_0 :J11_0_1 :J11_2_0 :J11_2_1" shape="0.46,26.86 0.36,14.06 -2.65,14.91 -3.61,15.69 -4.57,16.46 -5.80,17.05 -7.58,17.29 -7.58,26.89">
+        <request index="0" response="0000" foes="0000" cont="0"/>
+        <request index="1" response="0000" foes="0000" cont="0"/>
+        <request index="2" response="0000" foes="0000" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
+    </junction>
+    <junction id="J12" type="dead_end" x="-415.57" y="21.35" incLanes="" intLanes="" shape="-415.57,21.35 -415.61,18.15"/>
+    <junction id="J13" type="traffic_light" x="274.72" y="20.47" incLanes="Zwycieska_EW_0 Zwycieska_EE_0" intLanes=":J13_0_0 :J13_1_0" shape="274.89,23.67 274.84,17.27 274.58,17.27 274.57,23.67">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="J3" type="dead_end" x="28.19" y="743.96" incLanes="Oltaszynska_NN_0" intLanes="" shape="28.19,743.96 31.39,743.96 28.19,743.96"/>
+    <junction id="J4" type="dead_end" x="24.86" y="-542.71" incLanes="Oltaszynska_SS_0" intLanes="" shape="24.86,-542.71 21.66,-542.69 24.86,-542.71"/>
+    <junction id="J5" type="traffic_light" x="-331.18" y="20.64" incLanes="Zwycieska_WW_0 Zwycieska_WW_1 Zwycieska_WE_0" intLanes=":J5_0_0 :J5_1_0" shape="-327.18,27.04 -327.18,17.44 -335.17,17.43 -335.18,23.83 -332.15,24.67 -330.21,26.21 -328.97,26.80">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="J8" type="priority" x="27.88" y="49.54" incLanes="Oltaszynska_NS_0 E0_0" intLanes=":J8_0_0 :J8_0_1 :J8_2_0" shape="24.68,53.53 31.08,53.53 31.12,45.58 21.52,45.48 22.32,48.53 23.08,49.50 23.85,50.48 24.44,51.73">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="J9" type="priority" x="56.94" y="20.08" incLanes="Zwycieska_EW.13_0 -E8_0" intLanes=":J9_0_0 :J9_0_1 :J9_2_0" shape="60.94,23.29 60.95,16.89 52.92,16.90 52.98,26.50 56.00,25.66 56.96,24.88 57.92,24.11 59.16,23.52">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="Zwycieska" type="priority" x="-353.45" y="20.59" incLanes="Zwycieska_WW.148_0 E7_0" intLanes=":Zwycieska_0_0" shape="-351.97,23.79 -351.96,17.39 -354.98,17.41 -354.94,20.61">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+
+    <connection from="-E0" to="E1" fromLane="0" toLane="0" via=":J0_9_0" tl="J0" linkIndex="9" dir="r" state="o"/>
+    <connection from="-E0" to="E2" fromLane="1" toLane="0" via=":J0_10_0" tl="J0" linkIndex="10" dir="s" state="o"/>
+    <connection from="-E0" to="-E8" fromLane="1" toLane="0" via=":J0_11_0" tl="J0" linkIndex="11" dir="l" state="o"/>
+    <connection from="-E1" to="E2" fromLane="0" toLane="0" via=":J0_6_0" tl="J0" linkIndex="6" dir="r" state="O"/>
+    <connection from="-E1" to="-E8" fromLane="0" toLane="0" via=":J0_7_0" tl="J0" linkIndex="7" dir="s" state="O"/>
+    <connection from="-E1" to="E0" fromLane="1" toLane="0" via=":J0_8_0" tl="J0" linkIndex="8" dir="l" state="o"/>
+    <connection from="-E2" to="-E8" fromLane="0" toLane="0" via=":J0_3_0" tl="J0" linkIndex="3" dir="r" state="o"/>
+    <connection from="-E2" to="E0" fromLane="0" toLane="0" via=":J0_4_0" tl="J0" linkIndex="4" dir="s" state="o"/>
+    <connection from="-E2" to="E1" fromLane="1" toLane="1" via=":J0_5_0" tl="J0" linkIndex="5" dir="l" state="o"/>
+    <connection from="-E8" to="Zwycieska_EE" fromLane="0" toLane="0" via=":J9_2_0" dir="s" state="M"/>
+    <connection from="-Zwycieska_WW" to="-E1" fromLane="0" toLane="0" via=":J11_2_0" dir="s" state="M"/>
+    <connection from="-Zwycieska_WW" to="-E1" fromLane="0" toLane="1" via=":J11_2_1" dir="s" state="M"/>
+    <connection from="E0" to="Oltaszynska_NN" fromLane="0" toLane="0" via=":J8_2_0" dir="s" state="M"/>
+    <connection from="E1" to="Zwycieska_WW" fromLane="0" toLane="0" via=":J11_0_0" dir="s" state="M"/>
+    <connection from="E1" to="Zwycieska_WW" fromLane="1" toLane="1" via=":J11_0_1" dir="s" state="M"/>
+    <connection from="E2" to="Oltaszynska_SS" fromLane="0" toLane="0" via=":J10_0_0" dir="s" state="M"/>
+    <connection from="E7" to="Zwycieska_WE" fromLane="0" toLane="0" via=":Zwycieska_0_0" dir="s" state="M"/>
+    <connection from="E8" to="E0" fromLane="0" toLane="0" via=":J0_0_0" tl="J0" linkIndex="0" dir="r" state="O"/>
+    <connection from="E8" to="E1" fromLane="0" toLane="0" via=":J0_1_0" tl="J0" linkIndex="1" dir="s" state="O"/>
+    <connection from="E8" to="E2" fromLane="1" toLane="0" via=":J0_2_0" tl="J0" linkIndex="2" dir="l" state="o"/>
+    <connection from="Oltaszynska_NS" to="-E0" fromLane="0" toLane="0" via=":J8_0_0" dir="s" state="M"/>
+    <connection from="Oltaszynska_NS" to="-E0" fromLane="0" toLane="1" via=":J8_0_1" dir="s" state="M"/>
+    <connection from="Oltaszynska_SN" to="-E2" fromLane="0" toLane="0" via=":J10_1_0" dir="s" state="M"/>
+    <connection from="Oltaszynska_SN" to="-E2" fromLane="0" toLane="1" via=":J10_1_1" dir="s" state="M"/>
+    <connection from="Zwycieska_EE" to="-Zwycieska_EW" fromLane="0" toLane="0" via=":J13_1_0" tl="J13" linkIndex="1" dir="s" state="O"/>
+    <connection from="Zwycieska_EW" to="Zwycieska_EW.13" fromLane="0" toLane="0" via=":J13_0_0" tl="J13" linkIndex="0" dir="s" state="O"/>
+    <connection from="Zwycieska_EW.13" to="E8" fromLane="0" toLane="0" via=":J9_0_0" dir="s" state="M"/>
+    <connection from="Zwycieska_EW.13" to="E8" fromLane="0" toLane="1" via=":J9_0_1" dir="s" state="M"/>
+    <connection from="Zwycieska_WE" to="-Zwycieska_WW" fromLane="0" toLane="0" via=":J5_1_0" tl="J5" linkIndex="1" dir="s" state="O"/>
+    <connection from="Zwycieska_WW" to="Zwycieska_WW.148" fromLane="0" toLane="0" via=":J5_0_0" tl="J5" linkIndex="0" dir="s" state="O"/>
+
+    <connection from=":J0_0" to="E0" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":J0_1" to="E1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J0_2" to="E2" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":J0_3" to="-E8" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":J0_4" to="E0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J0_5" to="E1" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":J0_6" to="E2" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":J0_7" to="-E8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J0_8" to="E0" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":J0_9" to="E1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":J0_10" to="E2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J0_11" to="-E8" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":J10_0" to="Oltaszynska_SS" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J10_1" to="-E2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J10_1" to="-E2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":J11_0" to="Zwycieska_WW" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J11_0" to="Zwycieska_WW" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":J11_2" to="-E1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J11_2" to="-E1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":J13_0" to="Zwycieska_EW.13" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J13_1" to="-Zwycieska_EW" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J5_0" to="Zwycieska_WW.148" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J5_1" to="-Zwycieska_WW" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J8_0" to="-E0" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J8_0" to="-E0" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":J8_2" to="Oltaszynska_NN" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J9_0" to="E8" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":J9_0" to="E8" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":J9_2" to="Zwycieska_EE" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":Zwycieska_0" to="Zwycieska_WE" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

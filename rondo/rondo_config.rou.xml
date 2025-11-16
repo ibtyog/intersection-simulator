@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2025-11-05 23:22:41 by Eclipse SUMO netedit Version 1.24.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+    <vType id="t_0"/>
+    <vType id="truck" vClass="truck"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="f_0" type="t_0" begin="0.00" from="Zwycieska_EW" to="Oltaszynska_NN" end="3600.00" vehsPerHour="349.99"/>
+    <flow id="f_1" type="t_0" begin="0.00" from="Zwycieska_EW" to="Zwycieska_WW.148" end="3600.00" vehsPerHour="349.99"/>
+    <flow id="f_10" type="t_0" begin="0.00" from="Oltaszynska_SN" to="Oltaszynska_NN" end="3600.00" vehsPerHour="200"/>
+    <flow id="f_11" type="t_0" begin="0.00" from="Oltaszynska_SN" to="Zwycieska_WW.148" end="3600.00" vehsPerHour="700.39"/>
+    <flow id="f_2" type="t_0" begin="0.00" departPos="0.00" from="Zwycieska_EW" to="Oltaszynska_SS" end="3600.00" vehsPerHour="349.99"/>
+    <flow id="f_3" type="t_0" begin="0.00" from="E7" to="Oltaszynska_SS" end="3600.00" vehsPerHour="300"/>
+    <flow id="f_4" type="t_0" begin="0.00" from="E7" to="-Zwycieska_EW" end="3600.00" vehsPerHour="1150.16"/>
+    <flow id="f_5" type="t_0" begin="0.00" from="E7" to="Oltaszynska_NN" end="3600.00" vehsPerHour="250"/>
+    <flow id="f_6" type="t_0" begin="0.00" from="Oltaszynska_NS" to="Zwycieska_WW.148" end="3600.00" vehsPerHour="750"/>
+    <flow id="f_7" type="t_0" begin="0.00" from="Oltaszynska_NS" to="Oltaszynska_SS" end="3600.00" vehsPerHour="200"/>
+    <flow id="f_8" type="t_0" begin="0.00" from="Oltaszynska_NS" to="-Zwycieska_EW" end="3600.00" vehsPerHour="450"/>
+    <flow id="f_9" type="t_0" begin="0.00" from="Oltaszynska_SN" to="-Zwycieska_EW" end="3600.00" vehsPerHour="450"/>
+</routes>
