@@ -84,3 +84,9 @@ This file is used to execute whole simulations cycle. Only variable used is:
 3. Inform about ending simulation cycle.
 
 As addtion program esteminates time left based on last 20 simulation times.
+
+## Additional info
+- VPH - vehicles per hour,
+
+## Might be added in future
+- due to SUMO limitations (anomalies occuring, when speeding simulation up too much) there is a cap of time ticks, as solution, asynchronous run might be added
