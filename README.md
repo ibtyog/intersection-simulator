@@ -27,7 +27,7 @@ Other measures are:
 <i>Tau</i> is parameter of distance, kept between vehicles.
 
 ## App modules
-### Consts.py
+### consts.py
 This file contains all necessary constats and environmental variables for program to work.
 - SUMO_HOME is envvar for path to SUMO binaries, so it can be used by SumoLib,
 - SUMO_BINARY - name of folder, containing binaries of SUMO,
@@ -39,4 +39,15 @@ This file contains all necessary constats and environmental variables for progra
 - MIN_TAU_TRUCK_OFFSET - offset of variable above, to get <i>Tau</i> of trucks,
 - SUMMARY_OUTPUT_FILE - path of file generated, after SUMO simulation.
 - CSV_HEADERS - array of fixed headers' names for parser,
-- ORIGINAL_FLOWS - dictionary dataset of original flows, used for generating alternative scenarios.
+- ORIGINAL_FLOWS - dictionary dataset of original flows, used for generating flows for alternative scenarios.
+### routes.py
+This file is used to generate flows for given scenario, based on ORIGINAL_FLOWS. The inputs are:
+- filename - path, where generated routes should be exported,
+- p_trucks - percentage of trucks in simulation,
+- tau_trucks - explained in consts.py section,
+- tau_cars - explained in consts.py section,
+
+Returns path to generated flow file.
+
+### simulation.py
+This file is used to ran singular simulation 

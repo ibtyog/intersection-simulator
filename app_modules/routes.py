@@ -1,8 +1,6 @@
 from io import StringIO
 from app_modules.consts import ORIGINAL_FLOWS, SIM_DURATION
 def generate_routes_file(filename, p_truck, tau_car, tau_truck):
-    """Generuje plik routes.xml z dynamicznym podziałem na pojazdy/ciężarówki oraz dynamicznym tau."""
-
     routes_xml_builder = StringIO()
 
     routes_xml_builder.write(

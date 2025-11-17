@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     if SUMO_BINARY == "sumo":
         print(
-            f"Rozpoczynam symulację Monte Carlo ({NUM_SIMULATIONS * len(CONFIG_FILES)} iteracji)..."
+            f"Rozpoczynam symulację ({NUM_SIMULATIONS * len(CONFIG_FILES)} iteracji)..."
         )
     else:
         print(f"Rozpoczynam symulację testową GUI...")

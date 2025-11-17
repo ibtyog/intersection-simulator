@@ -1,8 +1,6 @@
 import subprocess
 from app_modules.consts import SUMO_BINARY
 def run_simulation_external(config_file, routes_file):
-    """Uruchamia SUMO bezpośrednio (bez TraCI) i czeka na zakończenie."""
-
     command = [
         SUMO_BINARY,
         "-c",
@@ -18,8 +16,6 @@ def run_simulation_external(config_file, routes_file):
 
     if SUMO_BINARY != "sumo-gui":
         command.append("--no-warnings")
-    else:
-        command.append("--start")  # Włącz start w GUI
 
     try:
         result = subprocess.run(command, capture_output=True, text=True)
