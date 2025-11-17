@@ -23,10 +23,10 @@ def run_simulation_external(config_file, routes_file):
         if result.returncode != 0:
             print(f"Błąd uruchomienia SUMO (Kod: {result.returncode}).")
             print(f"SUMO Output: {result.stderr}")
-            return None, None, None
+            return None
 
-        return True, True, True
+        return True
 
     except Exception as e:
         print(f"Krytyczny błąd w uruchamianiu SUMO: {e}")
-        return None, None, None
+        return None

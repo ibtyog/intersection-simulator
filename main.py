@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
             routes_filename = f"temp_{scenario}_{i}.rou.xml"
             generate_routes_file(routes_filename, p_truck_ratio, tau_car, tau_truck)
-            run_success, _, _ = run_simulation_external(config_file, routes_filename)
+            run_success = run_simulation_external(config_file, routes_filename)
 
             if run_success:
                 exits, avg_wait, duration = parse_summary_output(SUMMARY_OUTPUT_FILE)

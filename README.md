@@ -50,4 +50,10 @@ This file is used to generate flows for given scenario, based on ORIGINAL_FLOWS.
 Returns path to generated flow file.
 
 ### simulation.py
-This file is used to ran singular simulation 
+This file is used to ran singular simulation in headless mode. Inputs are:
+- config_file - configuration file of scenario,
+- routes_file - routes file, generated in routes.py.
+
+There is available option of forcing ending of simulation, by default simulation lasts till all vehicles leave scenario.
+
+Function returns array of (True,True,True) if simulation ended successfully.
