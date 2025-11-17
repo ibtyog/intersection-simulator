@@ -1,1 +1,42 @@
-# intersection-simulator
+# Intersection-simulator
+Simulation to support decision of choosing intersection with lights or roundabout.
+
+[Kacper K](https://github.com/Drag0neUsz)
+
+[Paweł J]()
+
+[Piotr H](https://github.com/ibtyog)
+
+## Technologies used
+- Python programming language,
+- Simulator of Urban Mobility (SUMO).
+
+## Measures
+Main purpose of program is to show the measure of average time of vehicle passing the given scenario (Ticks of time in SUMO are converted to "real-time" seconds). Scenarios' configurations can be built in SUMO GUI editor and need to be exported to <i>XML</i> files.
+
+Other measures are:
+- name of scenario,
+- iteration of current scenario,
+- percentage of trucks,
+- <i>tau</i> of cars,
+- <i>tau</i> of trucks,
+- number of cars involved in scenario,
+- total simulation time (time is counted till last tick of simulation)
+
+### Explanation of <i>tau</i>
+<i>Tau</i> is parameter of distance, kept between vehicles.
+
+## App modules
+### Consts.py
+This file contains all necessary constats and environmental variables for program to work.
+- SUMO_HOME is envvar for path to SUMO binaries, so it can be used by SumoLib,
+- SUMO_BINARY - name of folder, containing binaries of SUMO,
+- CONFIG_FILES - dictionary dataset for scenarios configuration files,
+- NUM_SIMULATIONS - (whole) number of simulations,
+- SIM_DURATION - time of generating vehicles for current flow in current simulation,
+- RANGE_P_TRUCKS - range, in which percentage of trucks is drawn,
+- RANGE_TAU_CAR - range, in which <i>Tau</i> of cars is drawn,
+- MIN_TAU_TRUCK_OFFSET - offset of variable above, to get <i>Tau</i> of trucks,
+- SUMMARY_OUTPUT_FILE - path of file generated, after SUMO simulation.
+- CSV_HEADERS - array of fixed headers' names for parser,
+- ORIGINAL_FLOWS - dictionary dataset of original flows, used for generating alternative scenarios.
