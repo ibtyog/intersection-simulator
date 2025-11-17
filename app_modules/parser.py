@@ -2,9 +2,6 @@ import os
 import xml.etree.ElementTree as ET
 
 def parse_summary_output(filename):
-    """Odczytuje summary_output.xml i zwraca metryki z ostatniego kroku.
-    Używa 'arrived', 'meanWaitingTime' i 'time'.
-    """
 
     if not os.path.exists(filename):
         print(f"Błąd: Plik wynikowy {filename} nie został wygenerowany.")
