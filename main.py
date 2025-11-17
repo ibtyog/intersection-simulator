@@ -1,5 +1,4 @@
 import random
-import traci
 import csv
 
 import sys
@@ -23,20 +22,7 @@ if __name__ == "__main__":
             f"Błąd: Nie można utworzyć pliku wyjściowego CSV: {OUTPUT_CSV}. Sprawdź uprawnienia."
         )
 
-    if SUMO_BINARY == "sumo":
-        print(
-            f"Rozpoczynam symulację ({NUM_SIMULATIONS * len(CONFIG_FILES)} iteracji)..."
-        )
-    else:
-        print(f"Rozpoczynam symulację testową GUI...")
-
     for scenario, config_file in CONFIG_FILES.items():
-        if scenario == "Swiatla" and not os.path.exists(config_file):
-            print(
-                f"Ostrzeżenie: Plik konfiguracyjny dla '{scenario}' ({config_file}) nie istnieje. Pomijam ten scenariusz."
-            )
-            continue
-
         print(f"\n--- SCENARIUSZ: {scenario} ({config_file}) ---")
 
         for i in range(NUM_SIMULATIONS):
@@ -52,13 +38,6 @@ if __name__ == "__main__":
                 exits, avg_wait, duration = parse_summary_output(SUMMARY_OUTPUT_FILE)
             else:
                 exits, avg_wait, duration = 0, 0.0, 0.0
-
-            if exits is not None:
-                if SUMO_BINARY == "sumo-gui":
-                    print("\n--- WYNIKI TESTU ---")
-                    print(f"  Pojazdy opuszczające: {exits}")
-                    print(f"  Średni czas opóźnienia (wg SUMO): {avg_wait:.2f} s")
-                    print(f"  Czas trwania symulacji (kroki): {duration:.2f} s")
 
                 with open(OUTPUT_CSV, "a", newline="") as f:
                     writer = csv.writer(f)
@@ -93,4 +72,4 @@ if __name__ == "__main__":
                         f"Szacowany czas do końca: {round(((time.time() - t[i-20]) / 20 * (NUM_SIMULATIONS - (i + 1))) / 60, 2)} min"
                     )
 
-    print(f"\n✅ Zakończono symulację. Wyniki zapisane w {OUTPUT_CSV}")
+    print(f"\nZakończono symulację. Wyniki zapisane w {OUTPUT_CSV}")
