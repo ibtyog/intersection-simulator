@@ -71,5 +71,6 @@ if __name__ == "__main__":
                     print(
                         f"Szacowany czas do końca: {round(((time.time() - t[i-20]) / 20 * (NUM_SIMULATIONS - (i + 1))) / 60, 2)} min"
                     )
-
+    if os.path.exists(SUMMARY_OUTPUT_FILE):
+        os.remove(SUMMARY_OUTPUT_FILE)
     print(f"\nZakończono symulację. Wyniki zapisane w {OUTPUT_CSV}")
