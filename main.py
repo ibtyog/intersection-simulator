@@ -39,9 +39,9 @@ if __name__ == "__main__":
             else:
                 exits, avg_wait, duration = 0, 0.0, 0.0
 
-                with open(OUTPUT_CSV, "a", newline="") as f:
-                    writer = csv.writer(f)
-                    writer.writerow(
+            with open(OUTPUT_CSV, "a", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(
                         [
                             scenario,
                             i + 1,
