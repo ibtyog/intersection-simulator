@@ -21,7 +21,7 @@ SUMO_BINARY = "sumo"
 STEP_LENGTH = 0.2
 
 RANGE_P_TRUCK = (0.0, 0.15)
-RANGE_TAU_CAR = (1.0, 2.5)
+TAU_CAR = 1.0
 MIN_TAU_TRUCK_OFFSET = 2.1
 
 
@@ -35,10 +35,10 @@ CSV_HEADERS = [
     "tau_osobowki",
     "tau_ciezarowki",
     "liczba_pojazdow_exit",
-    "sredni_czas_opoznienia_s",
+    "sredni_czas_oczekiwania_s",
     "calkowity_czas_symulacji_s",
     "1500th_liczba_pojazdow_exit",
-    "1500th_sredni_czas_opoznienia_s",
+    "1500th_sredni_czas_oczekiwania_s",
     "1500th_calkowity_czas_symulacji_s",
 ]
 

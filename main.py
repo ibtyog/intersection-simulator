@@ -27,11 +27,10 @@ if __name__ == "__main__":
 
         for i in range(NUM_SIMULATIONS):
             p_truck_ratio = random.uniform(*RANGE_P_TRUCK)
-            tau_car = random.uniform(*RANGE_TAU_CAR)
-            tau_truck = tau_car + MIN_TAU_TRUCK_OFFSET
+            TAU_TRUCK = TAU_CAR + MIN_TAU_TRUCK_OFFSET
 
             routes_filename = f"temp_{scenario}_{i}.rou.xml"
-            generate_routes_file(routes_filename, p_truck_ratio, tau_car, tau_truck)
+            generate_routes_file(routes_filename, p_truck_ratio, TAU_CAR, TAU_TRUCK)
             run_success = run_simulation_external(config_file, routes_filename)
 
             if run_success:
@@ -55,8 +54,8 @@ if __name__ == "__main__":
                         scenario,
                         i + 1,
                         round(p_truck_ratio, 4),
-                        round(tau_car, 4),
-                        round(tau_truck, 4),
+                        round(TAU_CAR, 4),
+                        round(TAU_TRUCK, 4),
                         exits,
                         round(avg_wait, 2),
                         round(duration, 2),
