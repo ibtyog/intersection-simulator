@@ -35,24 +35,36 @@ if __name__ == "__main__":
             run_success = run_simulation_external(config_file, routes_filename)
 
             if run_success:
-                exits, avg_wait, duration = parse_summary_output(SUMMARY_OUTPUT_FILE)
+                exits, avg_wait, duration, ft_exits, ft_avg_wait, ft_duration = (
+                    parse_summary_output(SUMMARY_OUTPUT_FILE)
+                )
             else:
-                exits, avg_wait, duration = 0, 0.0, 0.0
+                exits, avg_wait, duration, ft_exits, ft_avg_wait, ft_duration = (
+                    0,
+                    0.0,
+                    0.0,
+                    0,
+                    0.0,
+                    0.0,
+                )
 
             with open(OUTPUT_CSV, "a", newline="") as f:
                 writer = csv.writer(f)
                 writer.writerow(
-                        [
-                            scenario,
-                            i + 1,
-                            round(p_truck_ratio, 4),
-                            round(tau_car, 4),
-                            round(tau_truck, 4),
-                            exits,
-                            round(avg_wait, 2),
-                            round(duration, 2),
-                        ]
-                    )
+                    [
+                        scenario,
+                        i + 1,
+                        round(p_truck_ratio, 4),
+                        round(tau_car, 4),
+                        round(tau_truck, 4),
+                        exits,
+                        round(avg_wait, 2),
+                        round(duration, 2),
+                        ft_exits,
+                        round(ft_avg_wait, 2),
+                        round(ft_duration, 2),
+                    ]
+                )
 
             if os.path.exists(routes_filename):
                 os.remove(routes_filename)

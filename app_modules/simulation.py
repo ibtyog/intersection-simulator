@@ -1,5 +1,8 @@
 import subprocess
 from app_modules.consts import SUMO_BINARY
+from app_modules.consts import STEP_LENGTH
+
+
 def run_simulation_external(config_file, routes_file):
     command = [
         SUMO_BINARY,
@@ -8,7 +11,7 @@ def run_simulation_external(config_file, routes_file):
         "--route-files",
         routes_file,
         "--step-length",
-        "1",
+        f"{STEP_LENGTH}",
         "--quit-on-end",
         "--duration-log.statistics",
         # f"--end", str(SIM_DURATION)  # Wymuś zakończenie po SIM_DURATION, jeśli pojazdy utkną na długo
