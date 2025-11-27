@@ -5,7 +5,6 @@ import random
 
 
 def run_simulation_external(config_file, routes_file):
-    x = random.uniform(*ACTION_STEP_LENGTH_RANGE)
     command = [
         SUMO_BINARY,
         "-c",
@@ -17,10 +16,9 @@ def run_simulation_external(config_file, routes_file):
         "--quit-on-end",
         "--duration-log.statistics",
         "--default.action-step-length",
-        f"{x}",
+        f"{random.uniform(*ACTION_STEP_LENGTH_RANGE)}",
         # f"--end", str(SIM_DURATION)  # Wymuś zakończenie po SIM_DURATION, jeśli pojazdy utkną na długo
     ]
-    print(f"XXXXXXXXXXXXXXXXX {x}")
     if SUMO_BINARY != "sumo-gui":
         command.append("--no-warnings")
 
