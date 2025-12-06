@@ -12,7 +12,7 @@ Simulation to support decision of choosing intersection with lights or roundabou
 - Simulator of Urban Mobility (SUMO).
 
 ## Measures
-Main purpose of program is to show the measure of average time of delay of vehicle passing (time difference between best possible scenario and actual scenario) the given scenario (Ticks of time in SUMO are converted to "real-time" seconds). Scenarios' configurations can be built in SUMO GUI editor and need to be exported to <i>XML</i> files.
+Main purpose of program is to show the measure of average time of delay of vehicle passing the given scenario (time difference between best possible run and actual run) (Ticks of time in SUMO are converted to "real-time" seconds). Scenarios' configurations can be built in SUMO GUI editor and need to be exported to <i>XML</i> files.
 
 Other measures are:
 - name of scenario,
