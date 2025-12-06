@@ -1,6 +1,6 @@
 import sys
 import os
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
 
 
 load_dotenv(override=True)
@@ -11,12 +11,12 @@ sumo_bin = os.path.join(os.environ["SUMO_HOME"], "bin")
 os.environ["PATH"] = sumo_bin + os.pathsep + os.environ["PATH"]
 
 CONFIG_FILES = {
-    # "Rondo": "rondo/rondo.sumocfg"
-    "Swiatla": "sygnalizacja/sygnalizacja.sumocfg"
+    "Swiatla": "sygnalizacja/sygnalizacja.sumocfg",
+    "Rondo": "rondo/rondo.sumocfg"
 }
 
 
-NUM_SIMULATIONS = 5
+NUM_SIMULATIONS = 2
 SIM_DURATION = 1000
 SUMO_BINARY = "sumo"
 STEP_LENGTH = 0.2

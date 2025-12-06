@@ -12,7 +12,7 @@ Simulation to support decision of choosing intersection with lights or roundabou
 - Simulator of Urban Mobility (SUMO).
 
 ## Measures
-Main purpose of program is to show the measure of average time of vehicle passing the given scenario (Ticks of time in SUMO are converted to "real-time" seconds). Scenarios' configurations can be built in SUMO GUI editor and need to be exported to <i>XML</i> files.
+Main purpose of program is to show the measure of average time of delay of vehicle passing (time difference between best possible scenario and actual scenario) the given scenario (Ticks of time in SUMO are converted to "real-time" seconds). Scenarios' configurations can be built in SUMO GUI editor and need to be exported to <i>XML</i> files.
 
 Other measures are:
 - name of scenario,
@@ -21,10 +21,19 @@ Other measures are:
 - <i>tau</i> of cars,
 - <i>tau</i> of trucks,
 - number of cars involved in scenario,
-- total simulation time (time is counted till last tick of simulation)
+- total simulation time (time is counted till last tick of simulation, all cars "leave" scenario)
 
 ### Explanation of <i>tau</i>
 <i>Tau</i> is parameter of distance, kept between vehicles.
+
+## Adding env path
+[Github Issue](https://github.com/eclipse-sumo/sumo/issues/13040)
+
+You'll need to add path to SUMO_HOME/bin to your <b>Python Environment</b> in order for app to work properly 
+
+<b>Important note for MacOS:</b> Paths may vary on installation source. If using installer file from official site, example path might be:
+
+<i>/Library/Frameworks/EclipseSUMO.framework/Versions/1.25.0/EclipseSUMO</i>
 
 ## App modules
 ### consts.py
@@ -34,6 +43,8 @@ This file contains all necessary constats and environmental variables for progra
 - CONFIG_FILES - dictionary dataset for scenarios configuration files,
 - NUM_SIMULATIONS - (whole) number of simulations,
 - SIM_DURATION - time of generating vehicles for current flow in current simulation,
+- STEP_LENGHT - time interval of whole scenario's updates, 
+- ACTION_STEP_LENGHT - time interval of vehicles' decision making, equivalent to drivers' reaction time (setting value to 0 will set it same as STEP_LENGHT)
 - RANGE_P_TRUCKS - range, in which percentage of trucks is drawn,
 - RANGE_TAU_CAR - range, in which <i>Tau</i> of cars is drawn,
 - MIN_TAU_TRUCK_OFFSET - offset of variable above, to get <i>Tau</i> of trucks,

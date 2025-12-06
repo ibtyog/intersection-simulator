@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2025-11-09 16:38:52 by Eclipse SUMO netedit Version 1.24.0
+<!-- generated on 2025-11-19 17:50:57 by Eclipse SUMO netedit Version 1.24.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -212,9 +212,10 @@
         <phase duration="15" state="rr"/>
     </tlLogic>
     <tlLogic id="J5" type="static" programID="0" offset="0">
-        <phase duration="82" state="GG"/>
+        <phase duration="39" state="rr"/>
+        <phase duration="39" state="rG"/>
+        <phase duration="20" state="GG"/>
         <phase duration="3"  state="yy"/>
-        <phase duration="5"  state="rr"/>
     </tlLogic>
 
     <junction id="J0" type="traffic_light" x="28.18" y="20.24" incLanes="E8_0 E8_1 -E2_0 -E2_1 -E1_0 -E1_1 -E0_0 -E0_1" intLanes=":J0_0_0 :J0_1_0 :J0_2_0 :J0_3_0 :J0_4_0 :J0_5_0 :J0_6_0 :J0_7_0 :J0_8_0 :J0_9_0 :J0_10_0 :J0_11_0" shape="38.62,26.58 38.57,16.98 36.34,16.20 35.56,15.21 35.00,13.81 34.66,12.02 34.55,9.83 24.95,9.87 24.14,12.09 23.12,12.88 21.69,13.45 19.86,13.79 17.61,13.92 17.71,26.72 19.93,27.15 20.70,27.70 21.25,28.47 21.57,29.47 21.67,30.69 31.27,30.79 32.11,28.47 33.13,27.65 34.56,27.07 36.39,26.71">
